@@ -10,7 +10,7 @@ most popular websites across all federal agencies.
 st.caption(caption)
 
 with st.form(key="nasa"):
-    date = st.text_input("enter date:")
+    date = st.text_input("enter date : format - YYYY-MM-DD ",placeholder="YYYY-MM-DD")
     btn = st.form_submit_button("submit")
     if btn:
         print(date)
