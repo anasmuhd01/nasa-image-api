@@ -14,7 +14,8 @@ with st.form(key="nasa"):
     btn = st.form_submit_button("submit")
     if btn:
         # print(date)
-        url = f"https://api.nasa.gov/planetary/apod?api_key=gnoCmPes81gIQ7NhVkSq8EVHp9xNx5qoMhgqLqFb&date={date}"
+        api = st.secrets["API_KEY"]
+        url = f"https://api.nasa.gov/planetary/apod?api_key={api}&date={date}"
         content = requests.get(url)
         file = content.json()
 
